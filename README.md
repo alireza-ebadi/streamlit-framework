@@ -1,4 +1,4 @@
-# Streamlit on Heroku
+# Streamlit on Heroku (AE)
 
 This project is intended to help you tie together some important concepts and
 technologies from the 12-day course, including Git, Streamlit, JSON, Pandas,
