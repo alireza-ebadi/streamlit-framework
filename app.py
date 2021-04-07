@@ -25,7 +25,7 @@ myKey = os.getenv('ALPHAVANTAGE_API_KEY')
 if st.button('Process'):
     st.title(ticker)
     ts = TimeSeries(key=myKey, output_format='pandas')
-    #data, meta_data = ts.get_daily_adjusted(symbol=ticker, outputsize='full')
+    data, meta_data = ts.get_daily_adjusted(symbol=ticker, outputsize='full')
     test = np.linspace(1, 100, 30)
     fig, ax = plt.subplots(figsize=(10, 6))
     ax.plot(test, test*2)
