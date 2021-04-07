@@ -21,8 +21,10 @@ year = st.text_input('Year (e.g. 2019):')
 test = np.linspace(1, 100, 30)
 fig, ax = plt.subplots(figsize=(10, 6))
 ax.plot(test, test*2)
-ax.ylabel('USD')
-ax.xlabel('Date')
+ax.set_ylabel('USD')
+ax.set_xlabel('Date')
+ax.set_title('test')
+#ax.set_title('Closing price in ' + month.capitalize() + '-' + year +' for the ' + ticker.upper() + ' stock')
 st.pyplot(fig)
 
 
