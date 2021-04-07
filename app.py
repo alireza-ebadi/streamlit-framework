@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 from alpha_vantage.timeseries import TimeSeries
+import numpy as np
 
 FS = 24
 FN = 'times new roman'
@@ -18,7 +19,11 @@ month = st.text_input('Month (e.g. 3 or March):')
 
 year = st.text_input('Year (e.g. 2019):')
 
-
+test = np.linspace(1, int(year), int(year))
+fig, ax = plt.figure(figsize=(10, 6))
+plt.ylabel('USD')
+plt.xlabel('Date')
+st.pyplot(fig)
 
 
 """
