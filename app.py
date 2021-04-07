@@ -11,12 +11,11 @@ font = {'family':'serif', 'size':FS}
 plt.rc('font', **font)
 
 st.title('Define stock parameters')
-
 ticker = st.text_input('Ticker (e.g. TSLA):')
-
 month = st.text_input('Month (e.g. 3 or March):')
-
 year = st.text_input('Year (e.g. 2019):')
+
+myKey = os.getenv('ALPHAVANTAGE_API_KEY')
 
 test = np.linspace(1, 100, 30)
 fig, ax = plt.subplots(figsize=(10, 6))
