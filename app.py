@@ -12,13 +12,12 @@ plt.rc('font', **font)
 
 st.title('Define stock parameters')
 
-st.text('Ticker (e.g. TSLA):')
+ticker = st.text_input('Ticker (e.g. TSLA):')
 
-st.text('Month (e.g. 3 or March):')
+month = st.text_input('Month (e.g. 3 or March):')
 
-st.text('Year (e.g. 2019):')
+year = st.text_input('Year (e.g. 2019):')
 
-st.text_input('Enter some text')
 
 
 
