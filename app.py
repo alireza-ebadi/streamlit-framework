@@ -11,25 +11,28 @@ font = {'family':'serif', 'size':FS}
 plt.rc('font', **font)
 
 st.title('Define stock parameters')
+ticker = None
 ticker = st.text_input('Ticker (e.g. TSLA):')
+
+month = None
 month = st.text_input('Month (e.g. 3 or March):')
+
+year = None
 year = st.text_input('Year (e.g. 2019):')
 
-st.title(ticker)
-
 myKey = os.getenv('ALPHAVANTAGE_API_KEY')
-#ts = TimeSeries(key=myKey, output_format='pandas')
-#data, meta_data = ts.get_daily_adjusted(symbol=ticker, outputsize='full')
 
-
-test = np.linspace(1, 100, 30)
-fig, ax = plt.subplots(figsize=(10, 6))
-ax.plot(test, test*2)
-ax.set_ylabel('USD')
-ax.set_xlabel('Date')
-ax.set_title('test')
-#ax.set_title('Closing price in ' + month.capitalize() + '-' + year +' for the ' + ticker.upper() + ' stock')
-st.pyplot(fig)
+if (ticker is not None) & (month is not None) & (year is not None):
+    ts = TimeSeries(key=myKey, output_format='pandas')
+    data, meta_data = ts.get_daily_adjusted(symbol=ticker, outputsize='full')
+    test = np.linspace(1, 100, 30)
+    fig, ax = plt.subplots(figsize=(10, 6))
+    ax.plot(test, test*2)
+    ax.set_ylabel('USD')
+    ax.set_xlabel('Date')
+    ax.set_title('test')
+    #ax.set_title('Closing price in ' + month.capitalize() + '-' + year +' for the ' + ticker.upper() + ' stock')
+    st.pyplot(fig)
 
 
 """
