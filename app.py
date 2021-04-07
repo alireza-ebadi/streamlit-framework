@@ -11,7 +11,7 @@ year = st.text_input('Year (e.g. 2019):')
 
 myKey = os.getenv('ALPHAVANTAGE_API_KEY')
 
-FS = 24
+FS = 20
 FN = 'times new roman'
 font = {'fontname':FN, 'size':FS}
 plt.rc('font', **font)
