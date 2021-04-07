@@ -10,7 +10,17 @@ font = {'family':'serif', 'size':FS}
 plt.rc('text', usetex=True)
 plt.rc('font', **font)
 
-st.text('This is some text.')
+st.title('Define stock parameters')
+
+st.text('Ticker (e.g. TSLA):')
+
+st.text('Month (e.g. 3 or March):')
+
+st.text('Year (e.g. 2019):')
+
+st.text_input('Enter some text')
+
+
 
 """
 myKey = os.getenv('ALPHAVANTAGE_API_KEY')
