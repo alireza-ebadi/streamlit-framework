@@ -32,7 +32,7 @@ ax.set_title('test')
 st.pyplot(fig)
 
 
-""
+"""
 myKey = os.getenv('ALPHAVANTAGE_API_KEY')
 
 ticker = input('ticker: ')
