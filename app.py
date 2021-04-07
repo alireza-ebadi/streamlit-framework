@@ -13,7 +13,7 @@ myKey = os.getenv('ALPHAVANTAGE_API_KEY')
 
 FS = 20
 FN = 'times new roman'
-font = {'fontname':FN, 'size':FS}
+font = {'family':'serif', 'size':FS}
 plt.rc('font', **font)
 if st.button('Plot'):
     ts = TimeSeries(key=myKey, output_format='pandas')
