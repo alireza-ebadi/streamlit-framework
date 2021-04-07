@@ -22,7 +22,7 @@ year = st.text_input('Year (e.g. 2019):')
 
 myKey = os.getenv('ALPHAVANTAGE_API_KEY')
 
-if (ticker is not None) & (month is not None) & (year is not None):
+if st.button('Process'):
     st.title(ticker)
     ts = TimeSeries(key=myKey, output_format='pandas')
     #data, meta_data = ts.get_daily_adjusted(symbol=ticker, outputsize='full')
