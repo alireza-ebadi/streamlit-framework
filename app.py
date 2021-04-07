@@ -15,9 +15,11 @@ ticker = st.text_input('Ticker (e.g. TSLA):')
 month = st.text_input('Month (e.g. 3 or March):')
 year = st.text_input('Year (e.g. 2019):')
 
+print(ticker)
+
 myKey = os.getenv('ALPHAVANTAGE_API_KEY')
 ts = TimeSeries(key=myKey, output_format='pandas')
-data, meta_data = ts.get_daily_adjusted(symbol=ticker, outputsize='full')
+data, meta_data = ts.get_daily_adjusted(symbol='TSLA', outputsize='full')
 
 
 test = np.linspace(1, 100, 30)
@@ -30,7 +32,7 @@ ax.set_title('test')
 st.pyplot(fig)
 
 
-"""
+""
 myKey = os.getenv('ALPHAVANTAGE_API_KEY')
 
 ticker = input('ticker: ')
