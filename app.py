@@ -20,10 +20,10 @@ month = st.text_input('Month (e.g. 3 or March):')
 year = st.text_input('Year (e.g. 2019):')
 
 test = np.linspace(1, 100, 30)
-fig, ax = plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10, 6))
 plt.ylabel('USD')
 plt.xlabel('Date')
-st.pyplot(fig)
+st.pyplot()
 
 
 """
