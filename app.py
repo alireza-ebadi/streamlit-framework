@@ -24,7 +24,7 @@ myKey = os.getenv('ALPHAVANTAGE_API_KEY')
 
 if (ticker is not None) & (month is not None) & (year is not None):
     ts = TimeSeries(key=myKey, output_format='pandas')
-    data, meta_data = ts.get_daily_adjusted(symbol=ticker, outputsize='full')
+    #data, meta_data = ts.get_daily_adjusted(symbol=ticker, outputsize='full')
     test = np.linspace(1, 100, 30)
     fig, ax = plt.subplots(figsize=(10, 6))
     ax.plot(test, test*2)
