@@ -16,6 +16,9 @@ month = st.text_input('Month (e.g. 3 or March):')
 year = st.text_input('Year (e.g. 2019):')
 
 myKey = os.getenv('ALPHAVANTAGE_API_KEY')
+ts = TimeSeries(key=myKey, output_format='pandas')
+data, meta_data = ts.get_daily_adjusted(symbol=ticker, outputsize='full')
+
 
 test = np.linspace(1, 100, 30)
 fig, ax = plt.subplots(figsize=(10, 6))
